@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_ez_ib/home_screen.dart';
 
+import 'con_solary.dart';
 import 'logn.dart';
 main(){
   runApp(screen());

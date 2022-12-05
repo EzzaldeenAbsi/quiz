@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'con_solary.dart';
 import 'logn.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
              Navigator.pop(context,MaterialPageRoute(
                  builder: (context)=>Login()),);
 
-           }, child: Text('Exet'))
+           }, child: Text('Exet',))
          ],
        ),
 
@@ -38,7 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
            builder: (contex, cont, child) =>
            Text(
-           '${cont.solary}'),
+           '${cont.solary}',style: TextStyle(
+               fontSize: 50
+           ),),
 
 
            ),
@@ -57,29 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
      );
 
 
-    //      Center(
-    //
-    //      child: Column(
-    //
-    // mainAxisAlignment: MainAxisAlignment.center,
-    // children: <Widget>[
-    // const Text(
-    // 'CONSUMER',
-    // ),
-
-
-  //            ElevatedButton(
-  // onPressed: (){
-  //
-  // },
-  // // child: const Icon(Icons.add),
 
 }
-}
-class Solary with ChangeNotifier{
-  int solary=0;
-  chingSolary(){
-    solary=solary+100;
-        notifyListeners();
-  }
 }
